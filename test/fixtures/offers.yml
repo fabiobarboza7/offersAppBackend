@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  advertiser_name: MyString
+  url: MyString
+  description: MyString
+  starts_at: 2020-02-24 00:28:02
+  ends_at: 2020-02-24 00:28:02
+  premium: false
+
+two:
+  advertiser_name: MyString
+  url: MyString
+  description: MyString
+  starts_at: 2020-02-24 00:28:02
+  ends_at: 2020-02-24 00:28:02
+  premium: false
