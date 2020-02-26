@@ -57,7 +57,7 @@ module Api
 			private
 			
 			def offer_params
-				params.permit(:advertiser_name, :url, :description, :state, :starts_at, :ends_at, :premium)
+				params.require(:offer).permit(:advertiser_name, :url, :description, :state, :starts_at, :ends_at, :premium)
 			end
 			
 		end
