@@ -5,7 +5,8 @@ module Api
 
 			def index
 				offers = Offer.all
-				verify_date(offers)
+				# todo: verify business rules
+				# verify_date(offers)
 				render json: { status: 'success', message:'offers loaded', data: offers }, status: :ok
 			end
 			
