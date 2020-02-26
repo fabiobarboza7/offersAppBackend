@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'https://fake-cashback-api.herokuapp.com/'
+    origins 'https://fake-cashback-front.herokuapp.com/'
 
     resource '*',
       headers: :any,
