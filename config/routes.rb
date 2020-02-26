@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   namespace 'api' do
   	namespace 'v1' do
       resources :offers
+
+      put "offers/change_state/:id", to: "offers#change_state"
     end
   end
 end
