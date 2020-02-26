@@ -5,8 +5,6 @@ module Api
 
 			def index
 				offers = Offer.all
-				# todo: verify business rules
-				# verify_date(offers)
 				render json: { status: 'success', message:'offers loaded', data: offers }, status: :ok
 			end
 			
@@ -17,6 +15,8 @@ module Api
 			
 			def create
 				offer = Offer.new(offer_params)
+				verify_date(offer)
+
 				if offer.save
 					render json: { status: 'success', message:'offer created', data: offer }, status: :ok
 				else
@@ -35,7 +35,6 @@ module Api
 
 			def change_state
 				offer = Offer.find(params[:id])
-				puts offer.state
 				if offer.state === 'enabled'
 					offer.update(state: 0)
 				else 

@@ -1,5 +1,4 @@
 class Offer < ApplicationRecord	
-	before_save :set_states
 
 	validates :advertiser_name, uniqueness: true, presence: true
 	validates :url, :valid_url?, presence: true
@@ -16,24 +15,6 @@ class Offer < ApplicationRecord
 			self.url
 		else
 			errors.add(:url, "is not valid")
-		end
-	end
-
-	def set_states
-		if Time.now <= self.starts_at
-			self.update(state: 1)
-		end
-
-		if Time.now >= self.ends_at
-			self.update(state: 0)
-		end
-			
-		ends_at_is_empty
-	end
-
-	def ends_at_is_empty
-		if self.ends_at.nil?
-			self.update(state: 1)
 		end
 	end
 end
