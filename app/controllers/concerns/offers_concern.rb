@@ -3,12 +3,12 @@ module OffersConcern
 
   def verify_date(offers)
     offers.each do |offer| 
-      if Time.now >= offer.starts_at
+      if Time.now <= offer.starts_at
         offer.update(state: 1)
       end
 
       if !offer.ends_at.nil?
-        if Time.now <= offer.ends_at
+        if Time.now >= offer.ends_at
           offer.update(state: 0)
         end
       end
