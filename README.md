@@ -1,24 +1,27 @@
-# README
+# Rails Cashback API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description:
+Developing a RoR fake cashback App for a awesome company as a test.
 
-Things you may want to cover:
+## Starting
 
-* Ruby version
+### Requiriments
 
-* System dependencies
+- Rails
 
-* Configuration
+### Running
+```
+> bundle install
+> rails db:create && rails db:migrate
+> yarn
+> rails server
+```
+You can take a look in production server: https://simple-rails-login-app.herokuapp.com/
+```
+> Admin: https://fake-cashback-front.herokuapp.com/admin
+> Home: https://fake-cashback-front.herokuapp.com/
+```
 
-* Database creation
+## Author
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**Fábio Souza - fabiobarboza7@hotmail.com**
